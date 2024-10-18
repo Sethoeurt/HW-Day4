@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Drawing App</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            cursor: crosshair;
+        }
+        .controls {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Basic Drawing App</h2>
+
+    <!-- Canvas Element -->
+    <canvas id="drawingCanvas" width="600" height="400"></canvas>
+
+    <!-- Controls for color and line width -->
+    <div class="controls">
+        <label for="colorPicker">Choose Color:</label>
+        <input type="color" id="colorPicker" value="#000000">
+
+        <label for="lineWidth">Line Width:</label>
+        <input type="range" id="lineWidth" min="1" max="10" value="3">
+    </div>
+
+    <script>
+        // Get the canvas element and the context
+        const canvas = document.getElementById('drawingCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Variables to keep track of drawing state
+        let isDrawing = false;
+        let startX = 0;
+        let startY = 0;
+
+        // Function to start drawing
+        canvas.addEventListener('mousedown', (event) => {
+            isDrawing = true;
+            // Get the mouse position
+            startX = event.offsetX;
+            startY = event.offsetY;
+        });
+
+        // Function to draw as the mouse moves
+        canvas.addEventListener('mousemove', (event) => {
+            if (isDrawing) {
+                const x = event.offsetX;
+                const y = event.offsetY;
+                // Draw the line
+                drawLine(startX, startY, x, y);
+                // Update start position to current position
+                startX = x;
+                startY = y;
+            }
+        });
+
+        // Function to stop drawing
+        canvas.addEventListener('mouseup', () => {
+            isDrawing = false;
+        });
+
+        // Function to stop drawing when the mouse leaves the canvas
+        canvas.addEventListener('mouseout', () => {
+            isDrawing = false;
+        });
+
+        // Helper function to draw a line
+        function drawLine(x1, y1, x2, y2) {
+            ctx.beginPath();
+            ctx.moveTo(x1, y1);
+            ctx.lineTo(x2, y2);
+            ctx.strokeStyle = document.getElementById('colorPicker').value;
+            ctx.lineWidth = document.getElementById('lineWidth').value;
+            ctx.stroke();
+            ctx.closePath();
+        }
+    </script>
+
+</body>
+</html>

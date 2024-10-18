@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Color Selector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #colorPicker {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #saveBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Select a Background Color</h2>
+
+    <!-- Color Picker to choose the background color -->
+    <input type="color" id="colorPicker" value="#ffffff">
+
+    <!-- Button to save the selected color -->
+    <button id="saveBtn">Save Theme</button>
+
+    <script>
+        // Get references to the color picker and save button
+        const colorPicker = document.getElementById('colorPicker');
+        const saveBtn = document.getElementById('saveBtn');
+
+        // Function to apply the saved background color
+        function applySavedTheme() {
+            const savedColor = localStorage.getItem('themeColor');
+            if (savedColor) {
+                document.body.style.backgroundColor = savedColor;
+                colorPicker.value = savedColor; // Set the color picker to the saved color
+            }
+        }
+
+        // Function to save the selected color to localStorage
+        function saveThemeColor() {
+            const selectedColor = colorPicker.value;
+            localStorage.setItem('themeColor', selectedColor);
+            document.body.style.backgroundColor = selectedColor; // Apply the new background color
+        }
+
+        // Add event listener to the save button
+        saveBtn.addEventListener('click', saveThemeColor);
+
+        // Apply the saved theme when the page loads
+        window.onload = applySavedTheme;
+    </script>
+
+</body>
+</html>

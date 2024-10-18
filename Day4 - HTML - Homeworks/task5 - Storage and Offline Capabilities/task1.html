@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball Game</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Bouncing Ball Game</h2>
+
+    <!-- Canvas Element -->
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+
+    <script>
+        // Get the canvas element and its context
+        const canvas = document.getElementById('gameCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Ball properties
+        let x = canvas.width / 2;
+        let y = canvas.height / 2;
+        let ballRadius = 20;
+        let dx = 2;  // Horizontal movement speed
+        let dy = 2;  // Vertical movement speed
+        let ballColor = getRandomColor();  // Random initial color
+
+        // Function to get a random color
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to draw the ball
+        function drawBall() {
+            ctx.beginPath();
+            ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+            ctx.fillStyle = ballColor;
+            ctx.fill();
+            ctx.closePath();
+        }
+
+        // Function to update the game frame
+        function update() {
+            // Clear the canvas before each redraw
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw the ball
+            drawBall();
+
+            // Bounce off the walls and change color on edge collision
+            if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+                dx = -dx;
+                ballColor = getRandomColor();  // Change color
+            }
+            if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
+                dy = -dy;
+                ballColor = getRandomColor();  // Change color
+            }
+
+            // Move the ball
+            x += dx;
+            y += dy;
+
+            // Repeat the update function
+            requestAnimationFrame(update);
+        }
+
+        // Start the game
+        update();
+    </script>
+
+</body>
+</html>

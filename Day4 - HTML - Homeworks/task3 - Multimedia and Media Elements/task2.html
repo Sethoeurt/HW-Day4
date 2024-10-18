@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Hobby</title>
+    <style>
+        /* Basic styling for buttons */
+        .controls button {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .volume-slider {
+            width: 100px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>My Favorite Hobby: Photography</h2>
+
+    <!-- Embedding a YouTube video related to photography with custom controls -->
+    <h3>Check out this great tutorial on photography!</h3>
+    <div>
+        <iframe id="videoPlayer" width="560" height="315" 
+            src="https://www.youtube.com/embed/VIDEO_ID" 
+            title="Photography Tutorial" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Custom Video Controls -->
+    <div class="controls">
+        <button id="playVideo">Play</button>
+        <button id="pauseVideo">Pause</button>
+        <label for="videoVolume">Volume:</label>
+        <input id="videoVolume" class="volume-slider" type="range" min="0" max="1" step="0.1">
+    </div>
+
+    <!-- Embedding an audio file with custom controls -->
+    <h3>Listen to this relaxing background music while exploring photography tips!</h3>
+    <audio id="audioPlayer" src="path-to-your-audio-file.mp3"></audio>
+
+    <!-- Custom Audio Controls -->
+    <div class="controls">
+        <button id="playAudio">Play</button>
+        <button id="pauseAudio">Pause</button>
+        <label for="audioVolume">Volume:</label>
+        <input id="audioVolume" class="volume-slider" type="range" min="0" max="1" step="0.1">
+    </div>
+
+    <script>
+        // Custom Video Controls
+        const videoPlayer = document.getElementById('videoPlayer');
+        const playVideoButton = document.getElementById('playVideo');
+        const pauseVideoButton = document.getElementById('pauseVideo');
+        const videoVolumeSlider = document.getElementById('videoVolume');
+
+        // YouTube videos cannot be controlled like HTML5 video elements.
+        // Below is an example if you use an <video> element instead of <iframe>
+        // videoPlayer.play();
+        // videoPlayer.pause();
+
+        playVideoButton.addEventListener('click', () => {
+            // Play functionality for video
+            alert('YouTube iframe videos cannot be controlled directly. This is a placeholder for video play.');
+        });
+
+        pauseVideoButton.addEventListener('click', () => {
+            // Pause functionality for video
+            alert('YouTube iframe videos cannot be controlled directly. This is a placeholder for video pause.');
+        });
+
+        videoVolumeSlider.addEventListener('input', () => {
+            // Volume control for video
+            alert('YouTube iframe videos cannot be controlled directly. This is a placeholder for video volume control.');
+        });
+
+        // Custom Audio Controls
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playAudioButton = document.getElementById('playAudio');
+        const pauseAudioButton = document.getElementById('pauseAudio');
+        const audioVolumeSlider = document.getElementById('audioVolume');
+
+        playAudioButton.addEventListener('click', () => {
+            audioPlayer.play();
+        });
+
+        pauseAudioButton.addEventListener('click', () => {
+            audioPlayer.pause();
+        });
+
+        audioVolumeSlider.addEventListener('input', () => {
+            audioPlayer.volume = audioVolumeSlider.value;
+        });
+    </script>
+
+</body>
+</html>
