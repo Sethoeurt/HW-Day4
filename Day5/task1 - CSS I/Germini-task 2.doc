@@ -1,0 +1,124 @@
+Inline CSS
+
+Definition: CSS rules are directly applied to individual HTML elements using the style attribute.
+Syntax:
+HTML
+<element style="property: value; property: value;">...</element>
+Use code with caution.
+
+Example:
+HTML
+<h1 style="color: blue; font-size: 36px;">This is a heading</h1>
+Use code with caution.
+
+Advantages:
+Provides granular control over specific elements.
+Can be useful for quick styling adjustments.
+Disadvantages:
+Makes HTML code less readable and maintainable.
+Difficult to reuse styles across multiple elements.
+Not suitable for large-scale projects.
+Internal CSS
+
+Definition: CSS rules are defined within the <head> section of an HTML document using the <style> tag.
+Syntax:
+HTML
+<head>
+  <style>
+    /* CSS rules */
+  </style>
+</head>
+Use code with caution.
+
+Example:
+HTML
+<head>
+  <style>
+    h1 {
+      color: red;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a heading</h1>
+</body>
+Use code with caution.
+
+Advantages:
+Improves code organization and readability.
+Allows for styling multiple elements within the same document.
+Suitable for smaller projects.
+Disadvantages:
+Not ideal for large-scale projects with complex styling requirements.
+Styles cannot be reused across multiple HTML documents.
+External CSS
+
+Definition: CSS rules are defined in a separate file with a .css extension and linked to the HTML document using the <link> tag.
+Syntax:
+HTML
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+Use code with caution.
+
+Example: styles.css
+CSS
+h1 {
+  color: green;
+  font-size: 18px;
+}
+Use code with caution.
+
+index.html
+HTML
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>This is a heading</h1>
+</body>
+Use code with caution.
+
+Advantages:
+Separates content from presentation, improving code organization and maintainability.
+Allows for easy reuse of styles across multiple HTML documents.
+Ideal for large-scale projects with complex styling requirements.
+Disadvantages:
+Requires additional HTTP requests to load the CSS file, potentially impacting page load speed.
+May be less convenient for quick styling adjustments.
+HTML Page Demonstrating All Three Methods
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Methods</title>
+  <style>
+    /* Internal CSS */
+    h2 {
+      color: orange;
+      font-size: 20px;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1 style="color: blue; font-size: 36px;">Inline CSS</h1>
+  <h2>Internal CSS</h2>
+  <h1>External CSS</h1>
+</body>
+</html>
+Use code with caution.
+
+styles.css
+
+CSS
+/* External CSS */
+h1 {
+  color: green;
+  font-size: 18px;
+}
+Use code with caution.
+
+This HTML page demonstrates all three CSS methods, allowing you to compare their effects and understand their advantages and disadvantages

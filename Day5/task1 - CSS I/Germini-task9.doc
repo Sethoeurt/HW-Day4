@@ -1,0 +1,77 @@
+Alignment and Display in CSS
+Text Alignment
+text-align: This property controls the horizontal alignment of the text within an element.
+left: Aligns the text to the left.
+center: Centers the text within the element.
+right: Aligns the text to the right.
+justify: Justifies the text, aligning it to both the left and right margins.
+Vertical Alignment
+vertical-align: This property controls the vertical alignment of an element within its parent element.
+baseline: Aligns the element's baseline with the baseline of its parent.
+top: Aligns the top of the element with the top of its parent.
+middle: Centers the element vertically within its parent.
+bottom: Aligns the bottom of the element with the bottom of its parent.
+Display Property
+display: This property controls how an element is displayed.
+block: Creates a new block-level element, which takes up the full width of its parent container and starts on a new line.
+inline: Creates an inline element, which is displayed in the same line as other inline elements.
+inline-block: Creates an inline element that can have a width and height, similar to a block element.
+flex: Enables the flexbox layout model for the element and its children.
+Example HTML Document:
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alignment and Display</title>
+  <style>
+    .text-container {
+      width: 300px;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .text-container p {
+      text-align: center;
+    }
+
+    .vertical-align-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .vertical-align-container img {
+      height: 50px;
+      margin-right: 10px;
+    }
+
+    .display-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .display-container div {
+      border: 1px solid black;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Text Alignment</h2>
+  <div class="text-container">
+    <p>This text is centered.</p>
+  </div>
+
+  <h2>Vertical Alignment</h2>
+  <div class="vertical-align-container">
+    <img src="image.jpg" alt="Image">
+    <p>This text is vertically aligned with the image.</p>
+  </div>
+
+  <h2>Display Property</h2>
+  <div class="display-container">
+    <div>This is a block element.</div>
+    <div>This is another block element.</div>
+  </div>
+</body>
+</html>

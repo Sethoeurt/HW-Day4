@@ -1,0 +1,65 @@
+CSS Properties for Text and Fonts:
+
+font-family: Specifies the font family to be used for the text.
+font-size: Sets the size of the text.
+font-weight: Controls the boldness of the text (e.g., normal, bold, lighter, bolder).
+text-align: Specifies the alignment of the text within the element (e.g., left, center, right, justify).
+color: Sets the color of the text.
+text-decoration: Adds decorations to the text (e.g., underline, line-through, none).
+text-transform: Converts the text to uppercase, lowercase, or capitalized letters.
+Example HTML Document:
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Text and Font Styling</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    a {
+      color: blue;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a heading</h1>
+
+  <p>This is a paragraph of text.</p>
+
+  <p>This is another paragraph with <span style="font-weight: bold;">bold</span> text and <span style="text-decoration: line-through;">strikethrough</span> text.</p>
+
+  <a href="https://www.example.com">This is a link</a>
+</body>
+</html>
+
+
+
+
+Use code with caution.
+
+Explanation of the CSS Rules:
+
+The body selector sets the default font family for the entire document.
+The h1 selector styles the heading with a larger font size, bold weight, and centered alignment.
+The p selector styles paragraphs with a specific font size and line height.
+The a selector styles links with a blue color and an underline.
+Additional Notes:
+
+You can combine multiple CSS properties within a single declaration, separated by semicolons.
+You can use inline styles to apply specific styles to individual elements.
+For more advanced text styling, consider using CSS frameworks or libraries that provide pre-defined styles and utilities.

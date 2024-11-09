@@ -1,0 +1,95 @@
+CSS Selectors
+
+CSS selectors are used to identify specific elements in an HTML document so that styles can be applied to them. They are like "search terms" for CSS, allowing you to select elements based on their tags, classes, IDs, attributes, or other properties.
+
+Types of CSS Selectors
+
+There are several different types of CSS selectors, each with its own unique syntax and purpose. Here are some of the most common types:
+
+Element Selectors:
+Element selectors target elements based on their tag name, such as <p>, <div>, or <button>.
+
+Class Selectors:
+Class selectors target elements that have a specific class attribute. Classes are defined using the class attribute in the HTML element, and then selected using the dot notation in CSS, such as .button or .header.
+
+ID Selectors:
+ID selectors target elements that have a unique ID attribute. IDs are defined using the id attribute in the HTML element, and then selected using the pound sign (#) in CSS, such as #header or #main-content.
+
+Attribute Selectors:
+Attribute selectors target elements that have a specific attribute, regardless of its value. Attribute selectors use square brackets to specify the attribute name and its value, such as [href] or [type="button"].
+
+Pseudo-Class Selectors:
+Pseudo-class selectors target elements based on their state, such as whether they are hovered over, focused, or active. Pseudo-classes are defined using colons (:) in CSS, such as :hover or :active.
+
+Example HTML Document
+
+HTML
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Selectors Example</title>
+  <style>
+    /* Element selectors */
+    p {
+      color: blue;
+    }
+
+    /* Class selectors */
+    .button {
+      background-color: green;
+      color: white;
+    }
+
+    /* ID selectors */
+    #header {
+      font-size: 24px;
+      text-align: center;
+    }
+
+    /* Attribute selectors */
+    [href] {
+      text-decoration: underline;
+    }
+
+    /* Pseudo-class selectors */
+    :hover {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="header">CSS Selectors Example</h1>
+
+  <p>This is a paragraph.</p>
+
+  <button class="button">Click me</button>
+
+  <a href="https://www.example.com">This is a link</a>
+
+  <p>Hover over this paragraph to see the background color change.</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+Use code with caution.
+
+Explanation of how each selector targets different elements in the HTML:
+
+Element selectors: The blue text in the paragraph is selected using the p selector.
+Class selectors: The green button is selected using the .button selector.
+ID selectors: The header text is selected using the #header selector.
+Attribute selectors: The link text is underlined using the [href] selector.
+Pseudo-class selectors: The background color of the paragraph changes to yellow when you hover over it using the :hover selector.

@@ -1,0 +1,63 @@
+Online Fonts and Favicons
+Online Fonts
+Online fonts are font libraries that provide a vast collection of fonts that can be used on websites. These fonts are typically hosted on servers and can be accessed and used through CSS. This eliminates the need to embed font files directly on your website, which can improve page load times and compatibility.
+
+Using Google Fonts:
+
+Google Fonts is a popular online font library that offers a wide range of free fonts. To use Google Fonts in your HTML document, follow these steps:
+
+Choose fonts: Visit the Google Fonts website (fonts.google.com) and select the fonts you want to use.
+Generate the CSS code: Click the "Select" button next to each font, then click the "View code" button. Copy the generated CSS code.
+Add the CSS code to your HTML document: Paste the generated CSS code into the <head> section of your HTML document, between the <head> and <style> tags.
+Example:
+
+
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using Google Fonts</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
+</body>
+</html>
+Use code with caution.
+
+In this example, the Roboto font family is added to the HTML document using the generated CSS code from Google Fonts.
+
+Favicons
+A favicon is a small, square image that is displayed in the browser's tab or address bar. It helps users identify your website and can enhance its branding.
+
+Adding a Favicon:
+
+Create a favicon image: Create a square image (typically 16x16 or 32x32 pixels) in a format like PNG or ICO.
+Place the image in your website's directory.
+Add the following code to the <head> section of your HTML document:
+HTML
+<link rel="shortcut icon" href="path/to/your/favicon.ico">
+Use code with caution.
+
+Replace path/to/your/favicon.ico with the actual path to your favicon image.
+
+Example:
+
+HTML
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Using a Favicon</title>
+  <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+  <h1>This is a heading</h1>
+  <p>This is a paragraph.</p>
+</body>
+</html>

@@ -1,0 +1,122 @@
+Explanation of Differences between Inline, Internal, and External CSS:
+
+Inline CSS:
+
+Definition: Inline CSS applies styles directly to an HTML element using the style attribute inside the opening tag.
+Example:
+html
+Copy code
+<h1 style="color: red;">This is a heading with inline CSS</h1>
+Advantages:
+Quick to apply to individual elements.
+Ideal for applying unique styles to single elements.
+Disadvantages:
+Hard to maintain for large websites as styles are scattered.
+Code duplication if you need the same style for multiple elements.
+Internal CSS:
+
+Definition: Internal CSS applies styles within a <style> tag inside the <head> section of the HTML page.
+Example:
+html
+Copy code
+<style>
+  h2 {
+    color: blue;
+    font-size: 24px;
+  }
+</style>
+Advantages:
+Centralizes styles in the document, making them easier to manage than inline CSS.
+Useful for applying styles that only affect a single page.
+Disadvantages:
+Can clutter the HTML file.
+Less reusable as styles only apply to the current page.
+External CSS:
+
+Definition: External CSS uses a separate .css file linked to the HTML document through the <link> tag.
+Example:
+html
+Copy code
+<link rel="stylesheet" href="styles.css">
+Advantages:
+Allows separation of content and design, making code cleaner.
+Reusable across multiple HTML pages, making maintenance easier.
+Disadvantages:
+Requires additional HTTP requests to load the stylesheet, which may slightly increase page load time.
+Styles won't apply if the CSS file is missing or fails to load.
+HTML Page Demonstrating All Three Methods:
+html
+Copy code
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Demonstration</title>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Internal CSS -->
+  <style>
+    h2 {
+      color: blue;
+      font-size: 24px;
+      text-align: center;
+    }
+    p {
+      font-family: Arial, sans-serif;
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Inline CSS Example -->
+  <h1 style="color: red; text-align: center;">This is an Inline CSS Example</h1>
+
+  <!-- Internal CSS Example -->
+  <h2>This is an Internal CSS Example</h2>
+  <p>This paragraph is styled using internal CSS. The styles are located in the <style> tag within the HTML document.</p>
+
+  <!-- External CSS Example -->
+  <div class="external-example">
+    This text is styled using external CSS.
+  </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+styles.css (External CSS file):
+css
+Copy code
+.external-example {
+  color: green;
+  font-size: 20px;
+  text-align: center;
+  background-color: lightyellow;
+}
+Summary of Advantages and Disadvantages:
+
+Inline CSS:
+
+Advantage: Quick for small, unique styles.
+Disadvantage: Not scalable for larger projects.
+Internal CSS:
+
+Advantage: Keeps styles within the same document, good for single-page applications.
+Disadvantage: Makes HTML file larger and harder to maintain.
+External CSS:
+
+Advantage: Clean separation of content and styles, reusable across multiple pages.
+Disadvantage: Additional HTTP request to fetch the CSS file, but allows more maintainable code.

@@ -1,0 +1,90 @@
+CSS Variables (Custom Properties)
+CSS variables, also known as custom properties, are a powerful feature introduced in CSS3 that allows you to define and reuse values throughout your stylesheet. This can significantly improve code organization, maintainability, and the ability to make global changes to your design.
+
+Syntax:
+
+To define a CSS variable, use the -- prefix followed by a custom name. For example:
+
+CSS
+:root {
+  --primary-color: #007bff;
+  --font-family: Arial, sans-serif;
+}
+Use code with caution.
+
+In this example, --primary-color and --font-family are custom properties defined on the :root element, which represents the root element of the HTML document.
+
+Using CSS Variables:
+
+To use a custom property, you reference it using the var() function. For example:
+
+CSS
+h1 {
+  color: var(--primary-color);
+  font-family: var(--font-family);
+}
+Use code with caution.
+
+This will set the color of the h1 element to the value of the --primary-color variable and the font-family to the value of the --font-family variable.
+
+Example with Variable Changes:
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Variables Example</title>
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --font-family: Arial, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-family);
+    }
+
+    h1 {
+      color: var(--primary-color);
+      font-size: 36px;
+    }
+  </style>
+</head>
+<body>
+  <h1>This is a heading</h1>
+</body>
+</html>
+Use code with caution.
+
+In this example, the --primary-color and --font-family variables are defined on the :root element. The body and h1 elements use these variables for their styles.
+
+To change the primary color, you can simply update the --primary-color variable in the :root element:
+
+CSS
+:root {
+  --primary-color: #ff0000; /* Change to red */
+  --font-family: Arial, sans-serif;
+}
+Use code with caution.
+
+This will update the color of all elements that reference the --primary-color variable, such as the h1 element in this example.
+
+Benefits of CSS Variables:
+
+Improved maintainability: Centralizing styles in variables makes it easier to update and manage your stylesheet.
+Consistent theming: By using variables, you can easily create different themes or skins for your website by simply changing the variable values.
+Enhanced responsiveness: CSS variables can be used to create responsive designs by dynamically changing variable values based on screen size or other conditions.
+CSS variables are a valuable tool for creating more organized, maintainable, and flexible stylesheets.
+
+
+
+
+
+
+
+
+
+
+
+
+

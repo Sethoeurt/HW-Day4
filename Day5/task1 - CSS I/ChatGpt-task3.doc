@@ -1,0 +1,137 @@
+CSS selectors are patterns used to select and apply styles to HTML elements. They tell the browser which HTML elements the style rules should apply to. CSS selectors come in various types, each serving different purposes depending on how you want to target elements.
+
+Types of CSS Selectors and How They Work:
+Element Selector:
+
+Targets all instances of a specific HTML element.
+Example: p targets all <p> elements.
+Class Selector:
+
+Targets elements with a specific class attribute. Classes can be reused on multiple elements.
+Example: .my-class targets all elements with class="my-class".
+ID Selector:
+
+Targets a unique element with a specific id attribute. IDs must be unique within a page.
+Example: #my-id targets the element with id="my-id".
+Attribute Selector:
+
+Targets elements based on an attribute or attribute value.
+Example: input[type="text"] targets all <input> elements with the attribute type="text".
+Pseudo-class Selector:
+
+Targets elements based on their state or position in the document (e.g., hover, first child).
+Example: a:hover targets links when hovered.
+HTML Document Demonstrating Various CSS Selectors:
+html
+Copy code
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Selectors Example</title>
+  
+  <style>
+    /* Element Selector: Targets all paragraph elements */
+    p {
+      font-size: 18px;
+      color: gray;
+    }
+
+    /* Class Selector: Targets elements with the class 'highlight' */
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+
+    /* ID Selector: Targets the element with the id 'main-title' */
+    #main-title {
+      color: darkblue;
+      text-align: center;
+      font-size: 32px;
+    }
+
+    /* Attribute Selector: Targets input elements of type 'text' */
+    input[type="text"] {
+      border: 2px solid green;
+      padding: 5px;
+    }
+
+    /* Pseudo-class Selector: Changes link color when hovered */
+    a:hover {
+      color: red;
+      text-decoration: underline;
+    }
+
+    /* Pseudo-class Selector: Targets the first paragraph element */
+    p:first-child {
+      font-size: 20px;
+      color: darkred;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ID Selector Example -->
+  <h1 id="main-title">CSS Selectors Demo</h1>
+
+  <!-- Element Selector Example -->
+  <p>This is a paragraph styled using the element selector.</p>
+
+  <!-- Class Selector Example -->
+  <p class="highlight">This paragraph is highlighted using the class selector.</p>
+
+  <!-- Attribute Selector Example -->
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+  </form>
+
+  <!-- Pseudo-class Selector Example -->
+  <p>Here is a link styled with a pseudo-class: <a href="#">Hover over me</a>.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+Explanation of CSS Selectors in the Example:
+Element Selector (p):
+
+Applies to all <p> tags, setting their font size and color.
+Class Selector (.highlight):
+
+Targets all elements with class="highlight". This applies a yellow background and bold text to the paragraph with this class.
+ID Selector (#main-title):
+
+Targets the element with id="main-title". This is used for the <h1> element, applying a larger font size, dark blue color, and center alignment.
+Attribute Selector (input[type="text"]):
+
+Targets <input> elements where the type attribute is equal to "text". It styles the input field with a green border and padding.
+Pseudo-class Selector (a:hover):
+
+Targets <a> elements when the user hovers over them, changing their color to red and underlining the text.
+Pseudo-class Selector (p:first-child):
+
+Targets the first <p> element in the document, making its font size larger and changing the text color to dark red.
+Summary of Selectors:
+
+Element Selector: Targets all occurrences of a specific HTML tag.
+Class Selector: Targets elements with a shared class, allowing reuse.
+ID Selector: Targets a single, unique element on the page.
+Attribute Selector: Targets elements based on attribute values.
+Pseudo-class Selector: Targets elements based on their state or position, such as hover or first-child.

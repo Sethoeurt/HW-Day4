@@ -1,0 +1,147 @@
+Common CSS Properties for Styling Text
+font-family: Specifies the font for the text. You can use web-safe fonts or custom fonts (like Google Fonts).
+
+Example: font-family: Arial, sans-serif;
+font-size: Defines the size of the text. Units can be in pixels (px), ems (em), or percentages (%).
+
+Example: font-size: 16px;
+font-weight: Controls the thickness of the text. You can use values like normal, bold, or numeric values like 100, 400, 700.
+
+Example: font-weight: bold;
+text-align: Aligns the text horizontally within its container. Values include left, center, right, and justify.
+
+Example: text-align: center;
+color: Defines the text color.
+
+Example: color: #333333;
+line-height: Sets the space between lines of text, improving readability.
+
+Example: line-height: 1.5;
+text-decoration: Adds or removes text decorations such as underline, overline, or none.
+
+Example: text-decoration: underline;
+text-transform: Controls the capitalization of text, such as uppercase, lowercase, or capitalize.
+
+Example: text-transform: uppercase;
+Example HTML and CSS for Text Styling
+Below is an example of how to style different text elements such as headings, paragraphs, and links using CSS properties:
+
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text and Font Styling Example</title>
+  <style>
+    /* General text styling */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Headings */
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      text-transform: uppercase;
+      color: #4CAF50;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      text-align: left;
+      color: #2196F3;
+    }
+
+    /* Paragraphs */
+    p {
+      font-size: 16px;
+      font-weight: normal;
+      text-align: justify;
+      margin-bottom: 20px;
+    }
+
+    /* Links */
+    a {
+      font-size: 16px;
+      color: #FF5722;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Strong text */
+    strong {
+      font-weight: bold;
+      color: #E91E63;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heading -->
+  <h1>Welcome to My Styled Page</h1>
+
+  <!-- Subheading -->
+  <h2>Introduction to CSS Text Styling</h2>
+
+  <!-- Paragraph with bold text -->
+  <p>
+    CSS allows you to style text in a variety of ways. This paragraph demonstrates how to use <strong>font-family</strong>, <strong>font-size</strong>, and <strong>font-weight</strong> to create visually appealing text.
+  </p>
+
+  <!-- Another Paragraph -->
+  <p>
+    You can also adjust the alignment of text using the <strong>text-align</strong> property, which makes text easier to read, especially in long paragraphs.
+  </p>
+
+  <!-- Link -->
+  <p>
+    To learn more, visit the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">MDN CSS Documentation</a>.
+  </p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+Explanation of the Styles:
+Body Styles:
+
+The font-family is set to 'Arial', sans-serif for a clean and simple look across the entire page.
+line-height: 1.6 improves readability by creating space between lines of text.
+The text color is set to #333333, a dark gray that is easy on the eyes.
+Heading Styles:
+
+The <h1> is styled with a bold, uppercase font using font-weight: bold and text-transform: uppercase.
+The color is set to #4CAF50 (a shade of green), and the text is centered with text-align: center.
+The <h2> has a different size and color (#2196F3, blue) to show a clear hierarchy between headings.
+Paragraph Styles:
+
+The <p> elements have a font-size of 16px and are justified using text-align: justify, ensuring that both left and right margins are aligned.
+The second paragraph uses <strong> to emphasize certain words by making them bold and giving them a pink color (#E91E63).
+Link Styles:
+
+The <a> (link) element is styled with color: #FF5722 (orange) and removes the default underline using text-decoration: none.
+A hover effect is added so that when the user hovers over the link, an underline appears (text-decoration: underline).
+Summary of Key Text Properties in CSS:
+font-family: Controls the typeface of the text.
+font-size: Defines the size of the text.
+font-weight: Adjusts the thickness or boldness of the text.
+text-align: Aligns text horizontally in its container.
+color: Changes the color of the text.
+line-height: Defines the height of each line of text, impacting readability.
+text-transform: Controls the capitalization of text.

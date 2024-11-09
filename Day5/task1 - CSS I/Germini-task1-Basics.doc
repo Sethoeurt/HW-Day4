@@ -1,0 +1,74 @@
+
+
+CSS (Cascading Style Sheets):
+
+CSS is a programming language used to style HTML elements on the web. It allows you to control the appearance of your webpage, including:
+
+Layout: How elements are arranged on the page.
+Colors: The background and text colors.
+Fonts: The fonts and font sizes used.
+Spacing: Margins, padding, and borders.
+Effects: Animations, transitions, and transformations.
+Role in Web Development:
+
+CSS is essential for creating visually appealing and user-friendly websites. It separates the content (HTML) from the presentation (CSS), making it easier to maintain and update your website. By using CSS, you can create consistent styles across multiple pages and devices, ensuring a cohesive user experience.
+
+Simple HTML Document with CSS Stylesheet:
+
+HTML (index.html):
+
+HTML
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to my website!</h1>
+    <p>This   
+ is a paragraph of text.</p>
+</body>
+</html>   
+
+Use code with caution.
+
+CSS (style.css):
+
+CSS
+body {
+    background-color: #f0f0f0;
+    color: #333;
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+
+
+
+
+Use code with caution.
+
+Explanation of CSS Code:
+
+body { ... }:
+
+Selects the <body> element, which contains all the visible content of the page.
+background-color: #f0f0f0;: Sets the background color of the body to a light gray.
+color: #333;: Sets the text color of the body to a dark gray.
+font-size: 18px;: Sets the default font size for all text within the body to 18 pixels.
+h1 { ... }:
+
+Selects the <h1> element, which represents the most important heading on the page.
+font-size: 36px;: Sets the font size of the heading to 36 pixels, making it larger than the regular text.
+text-align: center;: Centers the heading horizontally on the page.
+Effect on HTML Elements:
+
+The background color of the entire page will be light gray.
+The text color of all elements within the body will be dark gray.
+The font size of the heading will be 36 pixels, making it larger and more prominent.
+The heading will be centered horizontally on the page
